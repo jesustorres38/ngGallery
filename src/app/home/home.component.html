@@ -1,4 +1,10 @@
 <div class="starter-template">
   <h1>Wellcome to Zwitter!</h1>
   <p class="lead">This is an example of how can you use Angularfire2 and firebase.<br> Also you can find routing and other things in this example.</p>
+  <ul>
+  <li class="text" *ngFor="let item of items | async">
+    <!--{{item | json}}-->
+    {{item.message}}
+  </li>
+</ul>
 </div>
