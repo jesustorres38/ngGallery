@@ -9,8 +9,18 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class HomeComponent implements OnInit {
 
   items: FirebaseListObservable<any[]>;
+  name: any;
+  msgVal: string = '';
+
   constructor(db: AngularFireDatabase) { 
-    this.items = db.list('/zweets');
+    this.items = db.list('/zweets', {
+      query: {
+        limitToLast:50
+      }
+    });
+
+    
+
   }
 
   ngOnInit() {
