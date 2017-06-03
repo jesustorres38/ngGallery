@@ -1,10 +1,10 @@
-import { NgZwitterPage } from './app.po';
+import { NgGalleryPage } from './app.po';
 
-describe('ng-zwitter App', () => {
-  let page: NgZwitterPage;
+describe('ng-gallery App', () => {
+  let page: NgGalleryPage;
 
   beforeEach(() => {
-    page = new NgZwitterPage();
+    page = new NgGalleryPage();
   });
 
   it('should display message saying app works', () => {

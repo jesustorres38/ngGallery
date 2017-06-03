@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class NgZwitterPage {
+export class NgGalleryPage {
   navigateTo() {
     return browser.get('/');
   }
