@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    GalleryComponent
+    GalleryComponent,
+    ImageDetailComponent
   ],
   imports: [
     BrowserModule,
