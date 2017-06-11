@@ -9,7 +9,6 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-
 const appRoutes: Routes = [
   {path: 'navbar', component: NavbarComponent },
   {path: 'home', component: HomeComponent },
@@ -25,4 +24,5 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
