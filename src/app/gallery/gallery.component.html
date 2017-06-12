@@ -1,15 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3" *ngFor="let i of visibleImages">
-
-      <a href="#" class="thumbnail" >
-        <img src="{{i.url}}" alt="">
-          <div class="caption">
-            <h3>Nombre</h3>
-            <p>{{i.caption}}</p>
-          </div>
-      </a>
-
-    </div>
+    <ul id="thumbnailsList">
+      <li *ngFor="let i of visibleImages">
+        <img src="{{i.url}}" class="tn" width="200" height="160">
+      </li>
+    </ul>
   </div>
 </div>

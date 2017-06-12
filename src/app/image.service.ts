@@ -20,7 +20,15 @@ export class ImageService {
 
 const IMAGES = [
   {"id": 1, "category": "boats", "caption": "View from a boat", "url": "assets/img/boat_01.jpg"},
-  {"id": 2, "category": "boats", "caption": "View from a boat", "url": "assets/img/boat_01.jpg"},
-  {"id": 3, "category": "boats", "caption": "View from a boat", "url": "assets/img/boat_01.jpg"},
-  {"id": 4, "category": "boats", "caption": "View from a boat", "url": "assets/img/boat_01.jpg"}
+  {"id": 2, "category": "castel", "caption": "castel and flowers", "url": "assets/img/castel_01.jpg"},
+  {"id": 3, "category": "city", "caption": "city at night", "url": "assets/img/city_01.jpg"},
+  {"id": 4, "category": "city", "caption": "downtown", "url": "assets/img/city_02.jpg"},
+  {"id": 5, "category": "field", "caption": "field with a house", "url": "assets/img/field_01.jpg"},
+  {"id": 6, "category": "field", "caption": "field and sky", "url": "assets/img/field_02.jpg"},
+  {"id": 7, "category": "montain", "caption": "montain and river", "url": "assets/img/montain_01.jpg"},
+  {"id": 8, "category": "town", "caption": "town", "url": "assets/img/town_01.jpg"},
+  {"id": 9, "category": "water", "caption": "water and montain", "url": "assets/img/water_01.jpg"},
+  {"id": 10, "category": "water", "caption": "water and river", "url": "assets/img/water_02.jpg"},
+  {"id": 11, "category": "water", "caption": "water and beach", "url": "assets/img/water_03.jpg"},
+  {"id": 12, "category": "water", "caption": "water and pier", "url": "assets/img/water_04.jpg"},
 ];
