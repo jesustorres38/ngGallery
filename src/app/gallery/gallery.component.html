@@ -1,9 +1,31 @@
 <div class="container">
+  
   <div class="row">
-    <ul id="thumbnailsList">
+    <div class="col-md-12">
+      <h2>Photos</h2>
+    </div>
+    <!--Cuando filterBy sea igual a -all- se le agrega la clase active al boton-->
+    <div class="col-md-12">
+      <button class="btn btn-default" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+      <button class="btn btn-default" [class.active]="filterBy=='boats'" (click)="filterBy='boats'">Boats</button>
+      <button class="btn btn-default" [class.active]="filterBy=='castel'" (click)="filterBy='castel'">Castel</button>
+      <button class="btn btn-default" [class.active]="filterBy=='city'" (click)="filterBy='city'">City</button>
+      <button class="btn btn-default" [class.active]="filterBy=='field'" (click)="filterBy='field'">Field</button>
+      <button class="btn btn-default" [class.active]="filterBy=='mountain'" (click)="filterBy='mountain'">Mountain</button>
+      <button class="btn btn-default" [class.active]="filterBy=='town'" (click)="filterBy='town'">Town</button>
+      <button class="btn btn-default" [class.active]="filterBy=='watter'" (click)="filterBy='watter'">Watter</button>
+    </div>
+    <div class="col-md-12">
+      <br>
+      <div class="col-md-3" *ngFor="let i of visibleImages">
+        <img src="{{i.url}}" class="img-responsive">
+      </div>  
+    </div>
+    <!--
+      <ul id="thumbnailsList">
       <li *ngFor="let i of visibleImages">
         <img src="{{i.url}}" class="tn" width="200" height="160">
       </li>
-    </ul>
+    </ul>-->
   </div>
 </div>
