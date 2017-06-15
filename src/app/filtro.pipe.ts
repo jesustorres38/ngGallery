@@ -13,16 +13,4 @@ export class FiltroPipe implements PipeTransform {
         });
       }
     }
-
-
-    // transform(value: any[], categoria: string): any {
-    //   if (categoria === "all"){
-    //     return value;
-    //   }else{
-    //     return value.filter(item => {
-    //       return item.category === categoria;
-    //     });
-    //   }
-  // }
-
   }

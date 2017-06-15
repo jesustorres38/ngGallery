@@ -14,7 +14,7 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
   {path: 'about', component: AboutComponent },
   {path: 'gallery', component: GalleryComponent },
-  {path: 'image-detail', component: ImageDetailComponent },
+  {path: 'image-detail/:id', component: ImageDetailComponent },
   {path: 'footer', component: FooterComponent },
   {path: '', redirectTo: 'home', pathMatch:'full' },
   {path:'**',component: NotFoundComponent }

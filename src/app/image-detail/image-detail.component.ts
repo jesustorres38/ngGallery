@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageService } from '../image.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-image-detail',
@@ -8,9 +9,13 @@ import { ImageService } from '../image.service';
 })
 export class ImageDetailComponent implements OnInit {
 
-  constructor(private servicioParaImagen: ImageService) { }
+  imagen : any;
+  constructor(private servicioParaImagen: ImageService, private ruta: ActivatedRoute) { }
 
   ngOnInit() {
+    this.imagen = this.servicioParaImagen.getImage(
+      +this.ruta.snapshot.params['id']
+    );
   }
 
 }
