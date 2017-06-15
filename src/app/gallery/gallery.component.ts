@@ -22,7 +22,7 @@ export class GalleryComponent implements OnInit, OnChanges {
 
   ngOnInit() {
   }
-
+  //esto no se pa que sirve
   ngOnChanges(){
     this.visibleImages = this.servicioParaImagen.getImages(); 
   }

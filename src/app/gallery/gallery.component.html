@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-12">
       <br>
-      <div class="col-md-3" *ngFor="let i of visibleImages">
+      <div class="col-md-3" *ngFor="let i of (visibleImages | filtroImagen:filterBy)">
         <img src="{{i.url}}" class="img-responsive">
       </div>  
     </div>

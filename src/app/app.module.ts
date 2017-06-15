@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { ImageService } from './image.service';
+import { FiltroPipe } from './filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ImageService } from './image.service';
     FooterComponent,
     AboutComponent,
     GalleryComponent,
-    ImageDetailComponent
+    ImageDetailComponent,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,
