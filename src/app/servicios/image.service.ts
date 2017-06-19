@@ -11,7 +11,6 @@ export class ImageService {
     //esto muestra una copia de las imagenes
     return this.visibleImages = IMAGES.slice(0);
   }
-
   getImage(id: number){
     return IMAGES.slice(0).find( image => image.id == id);
   }

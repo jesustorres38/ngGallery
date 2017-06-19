@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageService } from '../image.service';
+import { ImageService } from '../servicios/image.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

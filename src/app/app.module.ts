@@ -8,12 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
-import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
-import { ImageService } from './image.service';
-import { FiltroPipe } from './filtro.pipe';
+import { ImageService } from './servicios/image.service';
+import { FiltroPipe } from './filtros/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -21,8 +19,6 @@ import { FiltroPipe } from './filtro.pipe';
     NavbarComponent,
     NotFoundComponent,
     HomeComponent,
-    FooterComponent,
-    AboutComponent,
     GalleryComponent,
     ImageDetailComponent,
     FiltroPipe
