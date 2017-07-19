@@ -12,6 +12,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { ImageService } from './servicios/image.service';
 import { FiltroPipe } from './filtros/filtro.pipe';
+import { FinderComponent } from './finder/finder.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FiltroPipe } from './filtros/filtro.pipe';
     HomeComponent,
     GalleryComponent,
     ImageDetailComponent,
-    FiltroPipe
+    FiltroPipe,
+    FinderComponent
   ],
   imports: [
     BrowserModule,

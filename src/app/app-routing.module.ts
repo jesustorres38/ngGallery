@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
+import { FinderComponent } from './finder/finder.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
@@ -12,6 +13,7 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
   {path: 'gallery', component: GalleryComponent },
   {path: 'image-detail/:id', component: ImageDetailComponent },
+  {path: 'finder', component: FinderComponent },
   {path: '', redirectTo: 'home', pathMatch:'full' },
   {path:'**',component: NotFoundComponent }
 ];
