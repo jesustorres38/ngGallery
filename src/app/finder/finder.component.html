@@ -12,19 +12,34 @@
         </span>
       </div>
     </div>
-
-
-    <div class="col-md-12">
+    <div class="col-md-12" *ngIf="buscando">
+      <br> 
+      <p>Searching images....</p>
+    </div>
+    <div class="col-md-12" *ngIf="noResults">
       <br>
-      <div class="col-md-3" *ngFor="let x of images">
-        <!-- <a routerLink="/image-detail/{{i.id}}"> -->
-          <p>Tag: {{x.tags}}</p>
-          <p>User: {{x.user}}</p>
-          <p>Comment: {{x.comments}}</p>
-          <p>Likes: {{x.likes}}</p>
-          <img src="{{x.webformatURL}}" class="img-responsive">
-        <!-- </a> -->
-      </div>  
+      <p>No se encontraron resultados para..."{{tag}}"</p>
+    </div>
+    <div class="col-md-12">
+      <br> 
+      <div class="col-md-3" *ngFor="let x of images | slice:0:4">
+        <!-- <div class="thumbnail"> -->
+          <img src="{{x.webformatURL}}" alt="..." class="img-responsive">
+            <!-- <p>Tags: {{x.tags}}</p>
+            <p>User: {{x.user}}</p>
+            <p>Comment: {{x.comments}}</p> se puediera recorrer de 4 en 4 i=index
+            <p>Likes: {{x.likes}}</p> 
+        </div> -->
+      </div>
+      <div class="col-md-3" *ngFor="let x of images | slice:4:8">
+        <!-- <div class="thumbnail"> -->
+          <img src="{{x.webformatURL}}" alt="..." class="img-responsive">
+            <!-- <p>Tags: {{x.tags}}</p>
+            <p>User: {{x.user}}</p>
+            <p>Comment: {{x.comments}}</p> se puediera recorrer de 4 en 4 i=index, si el index es 4 da un salto
+            <p>Likes: {{x.likes}}</p> 
+        </div> -->
+      </div>
     </div>
   </div>
 </div>

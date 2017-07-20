@@ -10,7 +10,7 @@ export class FinderService {
   private api_key: string = environment.pixabay_api_key;
   private api_url: string = environment.pixabay_api_url;
   private url: string = this.api_url + this.api_key + '&q=';
-  private pages: string = "&per_page=10";
+  private pages: string = "&per_page=12";
 
   constructor(private solicitud: Http) { }
 
