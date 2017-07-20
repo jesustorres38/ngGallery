@@ -4,5 +4,27 @@
     <div class="col-md-12">
       <h1>Finder</h1>
     </div>
+    <div class="col-md-12">
+      <div class="input-group">
+        <input [(ngModel)]="tag" type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button (click)="buscarImagenes(tag)" class="btn btn-default" type="button">Find Images!</button>
+        </span>
+      </div>
+    </div>
+
+
+    <div class="col-md-12">
+      <br>
+      <div class="col-md-3" *ngFor="let x of images">
+        <!-- <a routerLink="/image-detail/{{i.id}}"> -->
+          <p>Tag: {{x.tags}}</p>
+          <p>User: {{x.user}}</p>
+          <p>Comment: {{x.comments}}</p>
+          <p>Likes: {{x.likes}}</p>
+          <img src="{{x.webformatURL}}" class="img-responsive">
+        <!-- </a> -->
+      </div>  
+    </div>
   </div>
 </div>

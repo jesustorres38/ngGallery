@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { ImageService } from './servicios/image.service';
+import { FinderService } from './servicios/finder.service';
 import { FiltroPipe } from './filtros/filtro.pipe';
 import { FinderComponent } from './finder/finder.component';
 
@@ -31,7 +32,7 @@ import { FinderComponent } from './finder/finder.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ImageService],
+  providers: [ImageService,FinderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

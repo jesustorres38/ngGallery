@@ -8,9 +8,17 @@ import { FinderService } from '../servicios/finder.service';
 export class FinderComponent implements OnInit {
 
   images: any[];
-  constructor(private Servicio: FinderService) { }
+  constructor(private servicio: FinderService) { }
 
   ngOnInit() {
+  }
+
+  buscarImagenes(query: string){
+    return this.servicio.getImage(query).subscribe(
+      data => console.log(data),
+      error => console.log(error),
+      () => console.log("Request Complete")
+    );
   }
 
 }
