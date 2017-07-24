@@ -6,7 +6,7 @@
     </div>
     <div class="col-md-12">
       <div class="input-group">
-        <input [(ngModel)]="tag" type="text" class="form-control" placeholder="Search for...">
+        <input (keyup)="onKey(tag,$event)" [(ngModel)]="tag" type="text" class="form-control" placeholder="Buscar palabra...">
         <span class="input-group-btn">
           <button (click)="buscarImagenes(tag)" class="btn btn-default" type="button">Find Images!</button>
         </span>
@@ -21,24 +21,15 @@
       <p>No se encontraron resultados para..."{{tag}}"</p>
     </div>
     <div class="col-md-12">
-      <br> 
-      <div class="col-md-3" *ngFor="let x of images | slice:0:4">
-        <!-- <div class="thumbnail"> -->
-          <img src="{{x.webformatURL}}" alt="..." class="img-responsive">
-            <!-- <p>Tags: {{x.tags}}</p>
+      <br>
+      <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let x of images">
+        <a routerLink="/image-detail/{{x.user}}/{{x.likes}}">
+        <img src="{{x.webformatURL}}" class="img-responsive">
+        </a>
+          <!--
             <p>User: {{x.user}}</p>
-            <p>Comment: {{x.comments}}</p> se puediera recorrer de 4 en 4 i=index
-            <p>Likes: {{x.likes}}</p> 
-        </div> -->
-      </div>
-      <div class="col-md-3" *ngFor="let x of images | slice:4:8">
-        <!-- <div class="thumbnail"> -->
-          <img src="{{x.webformatURL}}" alt="..." class="img-responsive">
-            <!-- <p>Tags: {{x.tags}}</p>
-            <p>User: {{x.user}}</p>
-            <p>Comment: {{x.comments}}</p> se puediera recorrer de 4 en 4 i=index, si el index es 4 da un salto
-            <p>Likes: {{x.likes}}</p> 
-        </div> -->
+            <p>Comment: {{x.comments}}</p> 
+            <p>Likes: {{x.likes}}</p>  -->
       </div>
     </div>
   </div>

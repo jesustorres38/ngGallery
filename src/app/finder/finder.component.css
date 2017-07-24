@@ -1,3 +1,13 @@
 /* .img-responsive{
     max-height: 150px;
 } */
+
+.img-responsive{
+    margin-top: 5px;
+    box-shadow: #555 1px 1px 2px 1px;
+    }
+
+.col-md-3{
+    padding-right: 2.5px;
+    padding-left: 2.5px;
+}

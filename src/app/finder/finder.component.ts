@@ -14,15 +14,17 @@ export class FinderComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+  onKey(tag:string, event:any) { 
+    if(event.keyCode == 13){
+      console.log(tag);
+      this.buscarImagenes(tag);
+    }
+  }
   llenarArray(data){
     this.images = data.hits;
-    console.log(data.hits);
     this.buscando=false;
-
-    if(this.images.length == 0){
-      this.noResults = true;
-    }else{this.noResults=false;}
+    if(this.images.length == 0){this.noResults = true;}
+    else{this.noResults=false;}
   }
 
   //tambien se puede manejar el error al igual que se lleno el array llamando a una funcion 
@@ -35,7 +37,4 @@ export class FinderComponent implements OnInit {
       () => console.log("Request Complete")
     );
   }
-
-
-
 }
