@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class FinderService {
   
+  private vinculo: string;
   private query: string;
   private api_key: string = environment.pixabay_api_key;
   private api_url: string = environment.pixabay_api_url;
@@ -17,5 +18,12 @@ export class FinderService {
   getImage(query){
     return this.solicitud.get(this.url+query+this.pages)
     .map(x => x.json());
+  }
+  malditolink(link:string){
+    this.vinculo = link;
+    console.log(this.vinculo);
+  }
+  regresamalditolink(){
+    return this.vinculo;
   }
 }

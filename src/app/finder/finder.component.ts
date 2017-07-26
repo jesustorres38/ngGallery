@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FinderService } from '../servicios/finder.service';
+
 @Component({
   selector: 'app-finder',
   templateUrl: './finder.component.html',
@@ -13,6 +14,9 @@ export class FinderComponent implements OnInit {
   constructor(private servicio: FinderService) { }
 
   ngOnInit() {
+  }
+  guardar(link: string){
+    this.servicio.malditolink(link);
   }
   onKey(tag:string, event:any) { 
     if(event.keyCode == 13){

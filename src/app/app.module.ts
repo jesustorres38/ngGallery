@@ -14,6 +14,7 @@ import { ImageService } from './servicios/image.service';
 import { FinderService } from './servicios/finder.service';
 import { FiltroPipe } from './filtros/filtro.pipe';
 import { FinderComponent } from './finder/finder.component';
+import { ImageDatailFinderComponent } from './image-datail-finder/image-datail-finder.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FinderComponent } from './finder/finder.component';
     GalleryComponent,
     ImageDetailComponent,
     FiltroPipe,
-    FinderComponent
+    FinderComponent,
+    ImageDatailFinderComponent
   ],
   imports: [
     BrowserModule,
