@@ -1,5 +1,4 @@
 import { Component, OnInit} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { FinderService } from '../servicios/finder.service';
 
 @Component({
@@ -10,12 +9,12 @@ import { FinderService } from '../servicios/finder.service';
 export class ImageDatailFinderComponent implements OnInit {
 
   link: string;
-  constructor(private ruta: ActivatedRoute, private servicio: FinderService) { 
-  this.link = servicio.regresamalditolink();
+  tags: string;
+  constructor(private servicio: FinderService) { 
+  this.link = servicio.regresarlink();
+  this.tags = servicio.regresartags();
   }
-
   ngOnInit() {
-
   }
 
 }

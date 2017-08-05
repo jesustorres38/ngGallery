@@ -6,7 +6,7 @@
     </div>
     <div class="col-md-12">
       <div class="input-group">
-        <input (keyup)="onKey(tag,$event)" [(ngModel)]="tag" type="text" class="form-control" placeholder="Buscar palabra...">
+        <input (keyup)="presionatecla(tag,$event)" [(ngModel)]="tag" type="text" class="form-control" placeholder="Buscar palabra...">
         <span class="input-group-btn">
           <button (click)="buscarImagenes(tag)" class="btn btn-default" type="button">Find Images!</button>
         </span>
@@ -23,7 +23,7 @@
     <div class="col-md-12">
       <br>
       <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let x of images" >
-        <a routerLink="/image-datail-finder" (click)="guardar(x.webformatURL)">
+        <a routerLink="/image-datail-finder" (click)="guardar(x.webformatURL,x.tags)">
         <img src="{{x.webformatURL}}" class="img-responsive">
         </a>
       </div>
