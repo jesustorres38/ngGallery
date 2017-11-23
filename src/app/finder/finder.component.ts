@@ -9,6 +9,7 @@ import { FinderService } from '../servicios/finder.service';
 export class FinderComponent implements OnInit {
 
   images: any[];
+  tag: string;
   buscando: boolean = false;
   noResults: boolean = false;
   constructor(private servicio: FinderService) { }
